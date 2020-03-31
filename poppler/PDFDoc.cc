@@ -2121,6 +2121,7 @@ Page *PDFDoc::parsePage(int page)
 
 Page *PDFDoc::getPage(int page)
 {
+  printf("Poppler Current page : %d\n",page);
   if ((page < 1) || page > getNumPages()) return nullptr;
 
   if (isLinearized() && checkLinearization()) {
